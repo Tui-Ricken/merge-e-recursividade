@@ -7,7 +7,7 @@ public class Palindromo {
     }
 
     private static boolean palindromo(String palavra, int inicio, int fim) {
-        System.out.println(inicio+"--"+fim);
+        //System.out.println(inicio+"--"+fim);
         
         if (inicio < fim) {
             if (palavra.charAt(inicio) == palavra.charAt(fim)) {

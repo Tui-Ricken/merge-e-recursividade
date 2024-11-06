@@ -23,9 +23,9 @@ public class MergeSortObject {
         if (inicio < fim) {
 
             int meio = (inicio + fim) / 2;
-            System.out.println("MERGE i:" + inicio + " m:" + meio);
+            //System.out.println("MERGE i:" + inicio + " m:" + meio);
             mergeObjeto(vetor, auxiliar, inicio, meio);
-            System.out.println("MERGE m:" + (meio + 1) + " f:" + fim);
+           //System.out.println("MERGE m:" + (meio + 1) + " f:" + fim);
             mergeObjeto(vetor, auxiliar, meio + 1, fim);
             intercalacao(vetor, auxiliar, inicio, meio, fim);
         }

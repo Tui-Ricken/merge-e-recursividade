@@ -8,7 +8,7 @@ public class SomaArray {
         System.out.println(x);
     }
     private static int soma(int vetor[],int inicio,int fim,int total){
-        System.out.println(fim+"--"+inicio);
+        //System.out.println(fim+"--"+inicio);
         if(inicio<fim){
             total=total+vetor[inicio]+vetor[fim];
             return soma(vetor,inicio+1,fim-1,total);    

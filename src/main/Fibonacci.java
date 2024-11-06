@@ -8,9 +8,7 @@ public class Fibonacci {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] fibonacci = generateFibonacci(n);
-        for (int i = 0; i < fibonacci.length; i++) {
-            System.out.print(fibonacci[i] + " ");
-        }
+        
 
     }
     public static int[] generateFibonacci(int n) {
