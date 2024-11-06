@@ -2,42 +2,42 @@ package main;
 
 public class Atividade10 {
     public static void main(String[] args) {
-        
-        int vetor1[] = generateArray(1000000);
-        int vetor2[] = generateArray(1000000);
-        int vetor3[] = generateArray(1000000);
-        int vetor4[] = generateArray(1000000);
-        long startTime, endTime;
-        float duration;
+        int vetorAux[] = novoArray(100000);
+        int vetor1[] = vetorAux.clone();
+        int vetor2[] = vetorAux.clone();
+        int vetor3[] = vetorAux.clone();
+        int vetor4[] = vetorAux.clone();
+        long tempoInicio, tempoFinal;
+        float duracao;
 
-        startTime = System.nanoTime();
+        tempoInicio = System.nanoTime();
         int[] auxiliar = new int[vetor4.length];
         merge(vetor4, auxiliar, 0, vetor4.length - 1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime) / 1000000;
-        System.out.println("Merge Sort took: "+ duration+ " ms");
+        tempoFinal = System.nanoTime();
+        duracao = (tempoFinal - tempoInicio) / 1000000;
+        System.out.println("Merge Sort : "+ duracao+ " ms");
 
-        startTime = System.nanoTime();
+        tempoInicio = System.nanoTime();
         bubbleSort(vetor1);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime) / 1000000;
-        System.out.println("Bubble Sort took: "+ duration+ " ms");
+        tempoFinal = System.nanoTime();
+        duracao = (tempoFinal - tempoInicio) / 1000000;
+        System.out.println("Bubble Sort : "+ duracao+ " ms");
 
-        startTime = System.nanoTime();
+        tempoInicio = System.nanoTime();
         insertionSort(vetor2);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime) / 1000000;
-        System.out.println("Insertion Sort took: " + duration + " ms");
+        tempoFinal = System.nanoTime();
+        duracao = (tempoFinal - tempoInicio) / 1000000;
+        System.out.println("Insertion Sort : " + duracao + " ms");
 
-        startTime = System.nanoTime();
+        tempoInicio = System.nanoTime();
         selectionSort(vetor3);
-        endTime = System.nanoTime();
-        duration = (endTime - startTime) / 1000000;
-        System.out.println("Selection Sort took: " + duration + " ms");
+        tempoFinal = System.nanoTime();
+        duracao = (tempoFinal - tempoInicio) / 1000000;
+        System.out.println("Selection Sort : " + duracao + " ms");
 
     }
 
-    public static int[] generateArray(int x) {
+    public static int[] novoArray(int x) {
         int[] array = new int[x];
         for (int i = 0; i < x; i++) {
             array[i] = (int) (Math.random() * x);
