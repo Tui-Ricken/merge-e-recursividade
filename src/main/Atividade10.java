@@ -15,13 +15,13 @@ public class Atividade10 {
         merge(vetor4, auxiliar, 0, vetor4.length - 1);
         endTime = System.nanoTime();
         duration = (endTime - startTime) / 1000000;
-        System.out.printf("Merge Sort took: "+ duration+ " ms");
+        System.out.println("Merge Sort took: "+ duration+ " ms");
 
         startTime = System.nanoTime();
         bubbleSort(vetor1);
         endTime = System.nanoTime();
         duration = (endTime - startTime) / 1000000;
-        System.out.printf("Bubble Sort took: ", duration+ " ms");
+        System.out.println("Bubble Sort took: "+ duration+ " ms");
 
         startTime = System.nanoTime();
         insertionSort(vetor2);
